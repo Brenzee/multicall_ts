@@ -15,7 +15,6 @@
     "src"
   ],
   "scripts": {
-    "analyze": "size-limit --why",
     "build": "dts build",
     "lint": "dts lint src --fix",
     "prepare": "dts build",

@@ -7,7 +7,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        node: ['14.x', '16.x']
+        node: ["14.x", "16.x"]
         os: [ubuntu-latest, windows-latest, macOS-latest]
 
     steps:
@@ -27,6 +27,8 @@ jobs:
 
       - name: Test
         run: yarn test --ci --coverage --maxWorkers=2
+        env:
+          MAINNET_RPC_URL: ${{ secrets.MAINNET_RPC_URL }}
 
       - name: Build
         run: yarn build
