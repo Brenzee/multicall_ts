@@ -1,8 +1,12 @@
 {
   "name": "multicall_ts",
+  "description": "A TypeScript library for interacting with the Multicall contract",
   "version": "0.1.0",
   "license": "MIT",
-  "author": "Brenzee",
+  "author": {
+    "name": "Brendons Karelis",
+    "email": "karelisbrendons@gmail.com"
+  },
   "main": "dist/index.js",
   "module": "dist/multicall_ts.esm.js",
   "typings": "dist/index.d.ts",
@@ -25,15 +29,13 @@
     }
   },
   "prettier": {
-    "printWidth": 80,
-    "semi": true,
-    "singleQuote": true,
+    "printWidth": 120,
+    "semi": false,
     "trailingComma": "es5"
   },
   "jest": {
     "testEnvironment": "node"
   },
-  "peerDependencies": {},
   "engines": {
     "node": ">=12"
   },
@@ -46,5 +48,18 @@
       "path": "dist/multicall_ts.esm.js",
       "limit": "10 KB"
     }
-  ]
+  ],
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^8.1.2",
+    "@tsconfig/recommended": "^1.0.2",
+    "dotenv": "^16.0.3",
+    "dts-cli": "^1.6.3",
+    "husky": "^8.0.3",
+    "size-limit": "^8.1.2",
+    "tslib": "^2.5.0",
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "ethers": "^5.7.2"
+  }
 }

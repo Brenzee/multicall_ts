@@ -2,6 +2,13 @@
   "extends": "@tsconfig/recommended/tsconfig.json",
   "include": ["src", "types"],
   "compilerOptions": {
-    "module": "esnext",
+    "types": ["node", "jest"],
+    "module": "ES2015",
+    "baseUrl": "src",
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+    "paths": {
+      "@": ["index.ts"]
+    }
   }
 }
